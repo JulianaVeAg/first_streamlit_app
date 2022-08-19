@@ -9,3 +9,5 @@ streamlit.text('🐔Hard_Boiled Free-Range Egg')
 streamlit.text('🥑🍞 Avocado Toast')
 
 
+streamlit.header('🍌🥭 Crea tu propio batido de frutas 🥝🍇')
+
