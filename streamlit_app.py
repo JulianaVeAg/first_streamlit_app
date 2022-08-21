@@ -31,7 +31,7 @@ fruityvice_response=requests.get("https://www.fruityvice.com/api/fruit/watermelo
 streamlit.text(fruityvice_response.json())
 
 #Cogemos la versión json de la respuesa y la normalizamos.
-fruityvice_normalized=pandas.json_normalized(fruityvice_response.json())
+fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
 
 #Salida a la pantalla como una tabla
 streamlit.dataframe(fruityvice_normalized)
