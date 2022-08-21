@@ -16,16 +16,19 @@ streamlit.header('🍌🥭 make your own fruit smoothie 🥝🍇')
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
-# Let's put a pick list here so they can pick the fruit they want to include 
+# Vamos a poner una lista para que puedan elegir la fruta que desean.
 
 fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Banana', 'Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 streamlit.dataframe(fruits_to_show) 
 
-
+#Nueva sección para desplegar la respuesta de la api.
 import requests
 
 fruityvice_respnse=requests.get("https://www.fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_respnse)
+streamlit.text(fruityvice_respnse.json())
+
+
+
 
