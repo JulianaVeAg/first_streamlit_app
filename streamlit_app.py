@@ -37,7 +37,6 @@ fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
 
 #Salida a la pantalla como una tabla
 streamlit.dataframe(fruityvice_normalized)
-streamlit.text("este si")
 
 
 
